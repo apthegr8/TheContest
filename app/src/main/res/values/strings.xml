@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">contestFinal</string>
+    <string name="_0">0</string>
+    <string name="button">Button</string>
+    <string name="steal">Steal</string>
+    <string name="score">Score</string>
+    <string name="reset">Reset</string>
+    <string name="TheContest">The Contest</string>
+    <string name="Contest">Contest</string>
+</resources>
