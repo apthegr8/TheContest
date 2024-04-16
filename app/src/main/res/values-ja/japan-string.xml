@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">コンテスト最終</string>
+    <string name="_0">0</string>
+    <string name="button">ボタン</string>
+    <string name="steal">奪う</string>
+    <string name="score">スコア</string>
+    <string name="reset">リセット</string>
+    <string name="TheContest">コンテスト</string>
+    <string name="Contest">コンテスト</string>
+</resources>

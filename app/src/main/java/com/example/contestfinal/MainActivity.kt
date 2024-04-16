@@ -1,5 +1,6 @@
 package com.example.contestfinal
 
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
@@ -79,6 +80,13 @@ class MainActivity : AppCompatActivity() {
 
         private fun updateDisplay() {
             textView.text = count.toString()
+
+            // Update text color based on count value
+            when {
+                count >= 10 -> textView.setTextColor(Color.GREEN)
+                count in 5..9 -> textView.setTextColor(Color.BLUE)
+                else -> textView.setTextColor(Color.BLACK) // Default color
+            }
         }
 
         fun saveState(outState: Bundle) {
