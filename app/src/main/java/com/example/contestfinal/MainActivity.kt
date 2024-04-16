@@ -3,14 +3,41 @@ package com.example.contestfinal
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    override fun onStart() {
+        super.onStart()
+        Log.i("LIFECYCLE", "onStart")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.i("LIFECYCLE", "onResume")
+    }
+    override fun onPause() {
+        super.onPause()
+        Log.i("LIFECYCLE", "onPause")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.i("LIFECYCLE", "onStop")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("LIFECYCLE", "onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("LIFECYCLE", "onRestart")
+    }
     companion object {
         const val KEY_COUNT = "count"
     }
+
 
     private lateinit var textView: TextView
     private lateinit var scoreButton: Button
@@ -22,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.i("LIFECYCLE", "onCreate")
 
         textView = findViewById(R.id.tv_view)
         scoreButton = findViewById(R.id.btn_score)
@@ -51,6 +79,7 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         counter.saveState(outState)
+        Log.i("LIFECYCLE", "onSave")
     }
 
     class Counter(private val textView: TextView, private val mediaPlayer: MediaPlayer) {
